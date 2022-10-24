@@ -1,0 +1,103 @@
+{%extends "base.html" %} {% block mainbody %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-9">
+      <h3 class="text-center">主页介绍(图片文字)</h3>
+      <img
+        class="mx-auto d-block img-fluid"
+        src="./static/files/modelStructure.png"
+        style="width: 70%; height: 70%"
+      />
+      <br />
+      <p class="text-center">
+        <a style="font-size: 25px" href="predict">模型预测入口</a>
+      </p>
+    </div>
+    <div class="col-3">
+      <div
+        class="container-fluid"
+        style="
+          background: #ffffff;
+          border-left: 3px outset;
+          width: 100%;
+          height: 100%;
+        "
+      >
+        <h5>
+          <img
+            src="./static/files/pencil.png"
+            style="width: 30px; height: 30px"
+          />&nbsp;Papers
+        </h5>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td><b class="text-primary">2022.09</b></td>
+              <td>paper1</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.08</b></td>
+              <td>paper2</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.07</b></td>
+              <td>paper3</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.06</b></td>
+              <td>paper4</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.05</b></td>
+              <td>paper5</td>
+            </tr>
+          </tbody>
+        </table>
+        <h5>
+          <img
+            src="./static/files/pencil.png"
+            style="width: 30px; height: 30px"
+          />&nbsp;Quick Links
+        </h5>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <td><b class="text-primary">2022.09</b></td>
+              <td>paper1</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.08</b></td>
+              <td>paper2</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.07</b></td>
+              <td>paper3</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.06</b></td>
+              <td>paper4</td>
+            </tr>
+            <tr>
+              <td><b class="text-primary">2022.05</b></td>
+              <td>paper5</td>
+            </tr>
+          </tbody>
+        </table>
+        <script
+          type="text/javascript"
+          src="//rf.revolvermaps.com/0/0/7.js?i=5sh24kidz55&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0"
+          async="async"
+        ></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <hr />
+  <p style="margin-bottom: 2px">Please cite the following paper:</p>
+  <p>Architecture of functional PTM site predict</p>
+</div>
+
+{% endblock %}

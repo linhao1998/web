@@ -1,0 +1,86 @@
+{%extends "base.html" %} {% block mainbody %}
+
+<div class="container-fluid">
+  <h5 class="text-center">Submit your sequence and site</h5>
+</div>
+
+<form action="startPredict" onsubmit="return validateForm()" method="post">
+  {% csrf_token %}
+  <div class="container mt-3">
+    <label for="model" class="form-label"
+      >Please select a prediction model:</label
+    >
+    <select class="form-select" name="model" id="model">
+      <option>Activity</option>
+      <option>Activity(Y)</option>
+      <option>Activity(ST)</option>
+      <option>PPI</option>
+      <option>PPI(Y)</option>
+      <option>PPI(ST)</option>
+      <option>Regulation</option>
+      <option>Regulation(Y)</option>
+      <option>Regulation(ST)</option>
+    </select>
+  </div>
+
+  <div class="container mt-3">
+    <div class="mb-3 mt-3">
+      <label for="sequence">
+        Paste input FASTA sequence in the area below:
+      </label>
+      <button
+        type="button"
+        class="btn btn-sm"
+        style="color: blue"
+        onclick="loadExample()"
+      >
+        Load example FASTA
+      </button>
+      <textarea
+        class="form-control"
+        rows="10"
+        id="sequence"
+        name="sequence"
+        placeholder=">..."s
+      >{{fastaSeq}}</textarea>
+    </div>
+    <div class="input-group" >
+      <label for="site" style="margin-top: 6px;margin-bottom: 6px;"
+        >Please enter the phosphorylation site to be predicted:</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        style="margin-left: 1%;"
+        id="site"
+        name="site">
+        <button
+        type="button"
+        class="btn btn-sm"
+        style="color: blue; margin-left: 1%; margin-right: 30%"
+        onclick="seqSite()"
+      >
+        (Site information)
+      </button>
+      <div class="d-grid">
+        <button
+          type="submit"
+          class="btn btn-primary btn-block"
+        >
+          <span
+            id="load"
+            class="spinner-border spinner-border-sm"
+            style="display: none"
+           
+          ></span>
+          Start prediction
+        </button>
+      </div>
+  </div>
+</form>
+
+{{html1|safe}}
+
+{{html2|safe}}
+
+{% endblock %}

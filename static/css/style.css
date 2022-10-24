@@ -1,0 +1,83 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 40px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contact {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 40px;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid rgb(241, 240, 240);
+  padding: 20px 40px;
+  width: 100%;
+}
+
+table,
+td,
+th {
+  border: 0px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+table tr td a {
+  color: blue;
+}
+
+table tr td a:hover {
+  color: cyan;
+}
+
+.flex2 {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  padding: 10px 20px;
+  width: 100%;
+  font-size: larger;
+}
