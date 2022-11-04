@@ -1,38 +1,52 @@
 {%extends "base.html" %} {% block mainbody %}
-
-<div class="contact">
-  <h2>Contact Us</h2>
-</div>
-
-<hr />
-
-<div class="contact">
-  <p>
-    We try our best to provide user-friendly web services to all users. Please
-    feel free to contact us via:
-  </p>
-  <div class="contact">
-    <ul style="list-style: disc">
-      <li>
-        Zhang<br />
-        <p style="color: blue">2021522@stu.suda.edu.com</p>
-      </li>
-      <li>
-        Zhang<br />
-        <p style="color: blue">2021522@stu.suda.edu.com</p>
-      </li>
-      <li>
-        Zhang<br />
-        <p style="color: blue">2021522@stu.suda.edu.com</p>
-      </li>
-    </ul>
+<div class="flex bg text-black">
+  <div class="container-fluid pt-4 my-3 text-center">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-2 text-center">
+        <h3>PTM Inspried<br />Drug Design</h3>
+      </div>
+      <div class="col-6">
+        <h3>
+          FuncPhos-SEQ-Functional Evaluation of Phosphosites based on Protein
+          Sequence and PPI architecture
+        </h3>
+      </div>
+      <div class="col-2"></div>
+    </div>
   </div>
 </div>
+{% include "navbar.html" %}
 
-<div class="container-fluid" style="margin-top: 270px">
+<div class="container-fluid p-3" style="margin-top: 10px">
+  <div class="contact">
+    <h2>Contact Us</h2>
+  </div>
+
   <hr />
-  <p style="margin-bottom: 2px">Please cite the following paper:</p>
-  <p>Architecture of functional PTM site predict</p>
+
+  <div class="contact">
+    <p class="text-size">
+      We try our best to provide user-friendly web services to all users. Please
+      feel free to contact us via:
+    </p>
+    <div class="contact">
+      <ul style="list-style: disc">
+        <li>
+          Zhang<br />
+          <p class="text-size" style="color: blue">2021522@stu.suda.edu.com</p>
+        </li>
+        <li>
+          Zhang<br />
+          <p class="text-size" style="color: blue">2021522@stu.suda.edu.com</p>
+        </li>
+        <li>
+          Zhang<br />
+          <p class="text-size" style="color: blue">2021522@stu.suda.edu.com</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

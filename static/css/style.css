@@ -81,3 +81,75 @@ table tr td a:hover {
   width: 100%;
   font-size: larger;
 }
+
+.flex3 {
+  display: flex;
+}
+
+.bg {
+  background-color: #d0e4fe;
+}
+
+.text-size {
+  font-size: large;
+}
+
+datalist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: small;
+  color: gray;
+  margin-top: -0.75em;
+}
+
+.sequencebox {
+  width: 100%;
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid gray;
+  border-radius: 0.25em;
+}
+
+.sequence {
+  width: max-content;
+}
+
+.sequence > div {
+  min-width: 1.4em;
+  margin: 0 0.2em;
+  text-align: center;
+  display: inline-block;
+}
+
+.ticks {
+  margin-top: -0.3em;
+  padding-top: 0;
+}
+
+.ticks > div {
+  overflow: visible;
+}
+
+.ticks > div :first-child {
+  font-size: xx-small;
+}
+
+.ticks > div :last-child {
+  margin-top: -0.3em;
+  font-size: x-small;
+}
+
+.rangetag {
+  width: calc(100% - 1rem);
+  margin: 0 0.5rem;
+  font-size: small;
+  color: #0d6efd;
+}
+
+#tag {
+  width: 4em;
+  text-align: center;
+  position: relative;
+}

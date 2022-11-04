@@ -1,18 +1,57 @@
 {%extends "base.html" %} {% block mainbody %}
+<div class="flex bg text-black">
+  <div class="container-fluid pt-3 text-center">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-2 text-center">
+        <h3 style="padding-top: 60px">PIDD DATABASE</h3>
+      </div>
+      <div class="col-3 text-center">
+        <h3 style="padding-top: 60px">PTM Inspired Drug Design</h3>
+      </div>
+      <div class="col-4">
+        <img
+          src="./static/files/logo.png"
+          style="height: 150px; width: 550px"
+        />
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+</div>
+{% include "navbar.html" %}
 
-<div class="container-fluid">
+<div class="container-fluid p-3" style="margin-top: 10px">
   <div class="row">
     <div class="col-9">
-      <h3 class="text-center">主页介绍(图片文字)</h3>
-      <img
-        class="mx-auto d-block img-fluid"
-        src="./static/files/modelStructure.png"
-        style="width: 70%; height: 70%"
-      />
-      <br />
-      <p class="text-center">
-        <a style="font-size: 25px" href="predict">模型预测入口</a>
+      <p class="text-size" style="margin-left: 3%; text-align: justify">
+        <b>Modern drug design</b> aims to discover novel lead compounds with
+        attractable chemical profiles to enable further exploration of the
+        intersection of chemical space and biological space. However, the
+        intersection is one of the most challenging tasks, as chemical space is
+        almost infinity and continuous, whereas the biological space is very
+        limited and discrete. Herein, we present a new direction leveraging
+        posttranslational modification (PTM) protein isoforms target space to
+        inspire drug design termed as
+        <b>“Post‐translational Modification Inspired Drug Design (PIDD).”</b>
       </p>
+
+      <p class="text-size" style="margin-left: 3%; text-align: justify">
+        PIDD aims to extend the intersections of chemical space and biological
+        space. PTM protein isoforms play vitol roles in various diseases and
+        biological signalings. The directions to elaborate PIDD in drug design
+        including discovering covalent binding inhibitors mimicking PTMs,
+        targeting PTM protein isoforms with allosteric sites from that of
+        wildtype counterpart, targeting protein‐protein interactions involving
+        PTMs, and hijacking protein degeneration by ubiquitination for PTM
+        protein isoforms. These directions will lead to a significant expansion
+        of the biological space and/or increase the tractability of compounds,
+        primarily due to precisely targeting PTM protein isoforms or complexes
+        which are highly relevant to biological functions. Importantly, this new
+        avenue will further enrich the personalizedtreatment opportunity through
+        precision medicine targeting PTM isoforms.
+      </p>
+      <img class="mx-auto d-block img-fluid" src="../static/files/1.png" />
     </div>
     <div class="col-3">
       <div
@@ -26,64 +65,104 @@
       >
         <h5>
           <img
-            src="./static/files/pencil.png"
+            src="../static/files/pencil.png"
             style="width: 30px; height: 30px"
-          />&nbsp;Papers
+          />&nbsp;Reference
         </h5>
         <table class="table table-borderless">
           <tbody>
             <tr>
-              <td><b class="text-primary">2022.09</b></td>
-              <td>paper1</td>
+              <td><b>1.</b></td>
+              <td>
+                Drug design targeting active posttranslational modification
+                protein isoforms
+              </td>
             </tr>
             <tr>
-              <td><b class="text-primary">2022.08</b></td>
-              <td>paper2</td>
-            </tr>
-            <tr>
-              <td><b class="text-primary">2022.07</b></td>
-              <td>paper3</td>
-            </tr>
-            <tr>
-              <td><b class="text-primary">2022.06</b></td>
-              <td>paper4</td>
-            </tr>
-            <tr>
-              <td><b class="text-primary">2022.05</b></td>
-              <td>paper5</td>
+              <td><b>2.</b></td>
+              <td>
+                Dynamics of Post-Translational Modification Inspires Drug Design
+                in the Kinase Family
+              </td>
             </tr>
           </tbody>
         </table>
         <h5>
           <img
-            src="./static/files/pencil.png"
+            class="img-fluid"
+            src="../static/files/pencil.png"
             style="width: 30px; height: 30px"
           />&nbsp;Quick Links
         </h5>
-        <table class="table table-borderless">
+        <table class="table table-borderless text-size">
           <tbody>
             <tr>
-              <td><b class="text-primary">2022.09</b></td>
-              <td>paper1</td>
+              <td>
+                <b>1.</b>
+              </td>
+              <td>
+                <a href="http://epsd.biocuckoo.cn/" target="_blank">EPSD</a>
+              </td>
             </tr>
             <tr>
-              <td><b class="text-primary">2022.08</b></td>
-              <td>paper2</td>
+              <td>
+                <b>2.</b>
+              </td>
+              <td>
+                <a href="http://plmd.biocuckoo.org/" target="_blank">PLMD</a>
+              </td>
             </tr>
             <tr>
-              <td><b class="text-primary">2022.07</b></td>
-              <td>paper3</td>
+              <td>
+                <b>3.</b>
+              </td>
+              <td>
+                <a href="http://ptmd.biocuckoo.org/" target="_blank">PTMD</a>
+              </td>
             </tr>
             <tr>
-              <td><b class="text-primary">2022.06</b></td>
-              <td>paper4</td>
+              <td>
+                <b>4.</b>
+              </td>
+              <td>
+                <a href="https://awi.cuhk.edu.cn/dbPTM/" target="_blank"
+                  >dbPTM</a
+                >
+              </td>
             </tr>
             <tr>
-              <td><b class="text-primary">2022.05</b></td>
-              <td>paper5</td>
+              <td>
+                <b>5.</b>
+              </td>
+              <td>
+                <a href="https://www.uniprot.org/" target="_blank">UniProt</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>6.</b>
+              </td>
+              <td>
+                <a
+                  href="https://research.bioinformatics.udel.edu/iptmnet/"
+                  target="_blank"
+                  >iPTMnet</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>7.</b>
+              </td>
+              <td>
+                <a href="https://www.phosphosite.org" target="_blank"
+                  >PhosphositePlus</a
+                >
+              </td>
             </tr>
           </tbody>
         </table>
+
         <script
           type="text/javascript"
           src="//rf.revolvermaps.com/0/0/7.js?i=5sh24kidz55&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0"
@@ -92,12 +171,6 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="container-fluid">
-  <hr />
-  <p style="margin-bottom: 2px">Please cite the following paper:</p>
-  <p>Architecture of functional PTM site predict</p>
 </div>
 
 {% endblock %}

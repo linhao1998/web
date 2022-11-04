@@ -26,6 +26,6 @@ urlpatterns = [
     path('contact', views.runContact),
     path('file1',views.downloadFile1),
     path('file2',views.downloadFile2),
-    path('predict',views.runPredict),
+    path('seq',views.runFuncPhosSEQ),
     path('startPredict',views.predictPost),
 ]

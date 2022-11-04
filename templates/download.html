@@ -1,51 +1,64 @@
 {%extends "base.html" %} {% block mainbody %}
-
-<div class="download">
-  <div class="flex">
-    <p>download</p>
-  </div>
-  <div class="flex1">
-    <table>
-      <tr>
-        <th>PTM types</th>
-        <th>number of proteins</th>
-        <th>number of sites</th>
-      </tr>
-      <tr>
-        <td>
-          <a href="file1"> human_uniport </a>
-        </td>
-        <td>204961</td>
-        <td>13565</td>
-      </tr>
-      <tr>
-        <td>
-          <a>A</a>
-        </td>
-        <td>1000</td>
-        <td>2000</td>
-      </tr>
-      <tr>
-        <td><a>B</a></td>
-        <td>1000</td>
-        <td>2000</td>
-      </tr>
-      <tr>
-        <td><a>C</a></td>
-        <td>1000</td>
-        <td>1000</td>
-      </tr>
-    </table>
-  </div>
-  <div class="flex">
-    <p>download</p>
+<div class="flex bg text-black">
+  <div class="container-fluid pt-4 my-3 text-center">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-2 text-center">
+        <h3>PTM Inspried<br />Drug Design</h3>
+      </div>
+      <div class="col-6">
+        <h3>
+          FuncPhos-SEQ-Functional Evaluation of Phosphosites based on Protein
+          Sequence and PPI architecture
+        </h3>
+      </div>
+      <div class="col-2"></div>
+    </div>
   </div>
 </div>
+{% include "navbar.html" %}
 
-<div class="container-fluid" style="margin-top: 241px">
-  <hr />
-  <p style="margin-bottom: 2px">Please cite the following paper:</p>
-  <p>Architecture of functional PTM site predict</p>
+<div class="container-fluid p-3" style="margin-top: 10px">
+  <div class="download">
+    <div class="flex">
+      <p>download</p>
+    </div>
+    <div class="flex1">
+      <table>
+        <tr>
+          <th>PTM types</th>
+          <th>number of proteins</th>
+          <th>number of sites</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="file1"> human_uniport </a>
+          </td>
+          <td>204961</td>
+          <td>13565</td>
+        </tr>
+        <tr>
+          <td>
+            <a>A</a>
+          </td>
+          <td>1000</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td><a>B</a></td>
+          <td>1000</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td><a>C</a></td>
+          <td>1000</td>
+          <td>1000</td>
+        </tr>
+      </table>
+    </div>
+    <div class="flex">
+      <p>download</p>
+    </div>
+  </div>
 </div>
-
 {% endblock %}

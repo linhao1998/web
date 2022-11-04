@@ -140,7 +140,34 @@ def onehot_coding(sequence):
         AANo = AANo+1
     return Matr
 
-def get_site_sequence(sequence,site):
+# def get_site_sequence(sequence,site):
+#     acc_seq = ''
+#     lines=sequence.split('\n')
+#     for line in lines:
+#         if line[0] == '>':
+#             ACC_ID=line.rstrip().split('|')[1]
+#             continue
+#         acc_seq = acc_seq + line.strip()
+#     acc_seq = re.sub('\s','',acc_seq)
+#     fasta = [s for s in acc_seq.strip()]
+#     seq = ['#' for i in range(21)]
+#     i = 10
+#     ab = site - 1
+#     RES=fasta[ab]
+#     ACC_SITE = ACC_ID + '_' + RES+str(site)
+#     while ab < len(fasta) and i < 21:
+#         seq[i] = fasta[ab]
+#         i = i + 1
+#         ab = ab + 1
+#     i = 10
+#     ab = site - 1
+#     while ab >= 0 and i >= 0:
+#         seq[i] = fasta[ab]
+#         i = i - 1
+#         ab = ab - 1
+#     return acc_seq,ACC_SITE,seq
+
+def get_accseq_accid(sequence):
     acc_seq = ''
     lines=sequence.split('\n')
     for line in lines:
@@ -149,6 +176,9 @@ def get_site_sequence(sequence,site):
             continue
         acc_seq = acc_seq + line.strip()
     acc_seq = re.sub('\s','',acc_seq)
+    return acc_seq,ACC_ID
+
+def get_accsite_seq(acc_seq,ACC_ID,site):
     fasta = [s for s in acc_seq.strip()]
     seq = ['#' for i in range(21)]
     i = 10
@@ -165,7 +195,25 @@ def get_site_sequence(sequence,site):
         seq[i] = fasta[ab]
         i = i - 1
         ab = ab - 1
-    return acc_seq,ACC_SITE,seq
+    return ACC_SITE,seq
+
+def getSiteSymbol(modelStr):
+    if modelStr == "Activity" or "PPI" or "Regulation":
+        siteSymbol = ["Y","S","T"]
+    elif modelStr == "Activity(Y)" or "PPI(Y)" or "Regulation(Y)":
+        siteSymbol = ["Y"]
+    else:
+        siteSymbol = ["S","T"]
+    return siteSymbol
+
+def getSiteIndexArr(acc_seq,modelStr):
+    siteSymbol = getSiteSymbol(modelStr)
+    siteIndexArr = []
+    for i in range(len(acc_seq)):
+        if acc_seq[i] in siteSymbol:
+            siteIndexArr.append(i)
+    return siteIndexArr
+
 
 def htmlDisplay1(acc_seq,site,modelStr,functionScore):
     acc_seq_len = len(acc_seq)
