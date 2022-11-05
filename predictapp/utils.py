@@ -198,9 +198,9 @@ def get_accsite_seq(acc_seq,ACC_ID,site):
     return ACC_SITE,seq
 
 def getSiteSymbol(modelStr):
-    if modelStr == "Activity" or "PPI" or "Regulation":
+    if modelStr == "Activity" or modelStr == "PPI" or  modelStr == "Regulation":
         siteSymbol = ["Y","S","T"]
-    elif modelStr == "Activity(Y)" or "PPI(Y)" or "Regulation(Y)":
+    elif modelStr == "Activity(Y)" or modelStr == "PPI(Y)" or modelStr == "Regulation(Y)":
         siteSymbol = ["Y"]
     else:
         siteSymbol = ["S","T"]

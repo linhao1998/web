@@ -8,8 +8,9 @@ from keras import backend as K
 from keras.layers import Layer
 import numpy as np
 import json
-from predictapp.utils import Position_Embedding,Self_Attention, get_accseq_accid, get_accsite_seq, getSiteIndexArr,\
-htmlDisplay1, htmlDisplay2,selectModel,onehot_coding
+from predictapp.utils import Position_Embedding,Self_Attention,\
+ get_accseq_accid, get_accsite_seq, getSiteIndexArr,selectModel,\
+ onehot_coding
 
 # Create your views here.
 loadSuccess = False
@@ -49,7 +50,6 @@ def downloadFile2(request):
     except Exception:
         raise Http404
 
-# @csrf_exempt
 def predictPost(request):
     try:
         global features1,features2,loadSuccess
@@ -76,7 +76,7 @@ def predictPost(request):
                     functionScore = model.predict([one_hot_coding, feature1, feature2])[0][0]
                     output[str(siteIndex)] = float(functionScore)
                 except:
-                    modelStr = "Onehot_Only"
+                    # modelStr = "Onehot_Only"
                     model = load_model('./static/models/one_hot21_1.h5',compile=False,
                         custom_objects={'Self_Attention': Self_Attention, 'Position_Embedding': Position_Embedding})
                     functionScore  = model.predict([one_hot_coding])[0][0]
