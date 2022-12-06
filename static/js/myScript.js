@@ -126,6 +126,26 @@ async function show_seq_result(siteScore) {
       })
     );
   };
+
+  $("#save").click(function () {
+    var fileResult = "";
+    for (index in siteScore) {
+      var position = parseInt(index) + 1;
+      fileResult += position + "\t" + data[index] + "\t" + siteScore[index] + "\n";
+    }
+    console.log(fileResult)
+    var content = seqmsg + "\nprediction model:  " + $("#model").val() + "\nPosition\tResidue\tScores\n" + fileResult;
+    var blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+    var anchor = document.createElement("a");
+    anchor.download = "Prediction_result.txt";
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.target = "_blank";
+    anchor.style.display = "none"; // just to be safe! 
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  })
+
   $("#result").show();
   show_result();
 
@@ -254,5 +274,4 @@ $(() => {
       $("#myModal").modal("show");
     }
   })
-
 });
